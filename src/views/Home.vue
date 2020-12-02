@@ -42,13 +42,14 @@ export default {
       justify-content: space-evenly;
       a {
         text-decoration: none;
-        color: rgba(70, 70, 70, 0.918);
+        color: rgba(0, 0, 0, 0.54);
         .icon {
           font-size: 150px;
+          margin-bottom: 0.7rem;
         }
       }
       a:hover {
-        color: rgba(70, 70, 70, 0.719);
+        color: rgba(70, 70, 70, 0.438);
       }
     }
   }

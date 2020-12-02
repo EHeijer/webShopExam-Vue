@@ -198,7 +198,7 @@ import RegisterProduct from '../components/RegisterProduct'
         }
 }
    .product-container {
-        padding-top: 120px;
+        padding-top: 150px;
         padding-bottom: 50px;
         max-width: 1538px;
         min-height: 95vh;

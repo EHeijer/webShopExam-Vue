@@ -20,10 +20,11 @@ import {
   faTrashAlt,
   faTimes,
   faPlusCircle,
-  faSearchPlus
+  faSearchPlus,
+  faBars
 } from '@fortawesome/free-solid-svg-icons';
 
-library.add(faHome, faSearchPlus, faPlusCircle, faTimes, faTrashAlt, faPen, faUser, faUserPlus, faSignInAlt, faSignOutAlt, faEnvelope,faHouseUser, faUsers, faTshirt, faTasks ,faHistory);
+library.add(faHome, faBars, faSearchPlus, faPlusCircle, faTimes, faTrashAlt, faPen, faUser, faUserPlus, faSignInAlt, faSignOutAlt, faEnvelope,faHouseUser, faUsers, faTshirt, faTasks ,faHistory);
 
 Vue.config.productionTip = false
 

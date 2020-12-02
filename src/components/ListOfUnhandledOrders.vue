@@ -184,7 +184,7 @@ import { mapState } from "vuex"
         max-width: 1538px;
         min-height: 100vh;
         margin: auto;
-        padding: 5rem 2rem 2rem 2rem;
+        padding: 150px 2rem 2rem 2rem;
         .order-table {
             box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.4);
             width: 80%;
