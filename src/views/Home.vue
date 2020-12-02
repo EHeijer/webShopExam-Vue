@@ -1,18 +1,55 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="actions-container">
+      <router-link to="employee-actions/handle-orders" class="function">
+        <font-awesome-icon icon="tasks" class="icon"/>
+        <h2>HANDLE ORDERS</h2>
+      </router-link>
+      <router-link to="employee-actions/order-history" class="function">
+        <font-awesome-icon icon="history" class="icon"/>
+        <h2>ORDER HISTORY</h2>
+      </router-link>
+      <router-link to="employee-actions/products" class="function">
+        <font-awesome-icon icon="tshirt" class="icon"/>
+        <h2>PRODUCTS</h2>
+      </router-link>
+
+    </div>
+    
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld
+    
   }
 }
 </script>
+<style lang="scss" scoped>
+  .home {
+    min-height: 100vh;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    .actions-container {
+      width: 80%;
+      margin: auto;
+      display: flex;
+      justify-content: space-evenly;
+      a {
+        text-decoration: none;
+        color: rgba(70, 70, 70, 0.918);
+        .icon {
+          font-size: 150px;
+        }
+      }
+      a:hover {
+        color: rgba(70, 70, 70, 0.719);
+      }
+    }
+  }
+</style>
