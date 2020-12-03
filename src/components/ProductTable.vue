@@ -21,7 +21,7 @@
                     <th>Price</th>
                     <th>Status</th>
                     <th>Shelf Number</th>
-                    <th style="width:200px; text-align: center;">Actions</th>
+                    <th style="width:130px; text-align: center;">Actions</th>
                 </tr>
                 <tr class="table-row" v-for="(product, index) in getProducts" :key="index">
                     <td><img :src="getImgUrl(product.imageUrl)" alt=""></td>
@@ -33,7 +33,7 @@
                     <td v-if="!product.removed">In Stock</td>
                     <td v-if="product.removed">Not In Stock</td>
                     <td>{{product.shelfNumber}}</td>
-                    <td style="width:200px;color:#000; text-align: center;">
+                    <td style="width:130px;color:#000; text-align: center;">
                         <font-awesome-icon @click="showProduct(product.id)" icon="pen" class="icon"/>
                         <font-awesome-icon v-if="!product.removed" @click="changeProductStatus(product)" icon="trash-alt" class="icon"/>
                         <font-awesome-icon v-if="product.removed" @click="changeProductStatus(product)" icon="plus-circle" class="icon"/>
@@ -208,6 +208,7 @@ import RegisterProduct from '../components/RegisterProduct'
             box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.4);
             overflow-y: scroll;
             max-height: 70vh;
+            width: 95%;
             margin: auto;
             header {
                 background: rgba(#000, 0.54);

@@ -40,7 +40,7 @@
                                 <th>Price</th>
                             </tr>
                             <tbody>
-                            <tr class="table-row" v-for="(orderline, index) in order.orderLines" :key="index">
+                            <tr class="table-modal-row" v-for="(orderline, index) in order.orderLines" :key="index">
                                 <td><img style="width:90px;" :src="require('@/assets/' + orderline.product.imageUrl)" alt=""></td>
                                 <td>{{orderline.product.id}}</td>
                                 <td>{{orderline.product.brand}}</td>
@@ -123,7 +123,7 @@ import { mapState } from "vuex"
         .icon {
         position: absolute;
         left: 97.5%;
-        top: 12px;
+        top: 6px;
         font-size: 25px;
         }
     }
@@ -134,7 +134,10 @@ import { mapState } from "vuex"
         border-collapse: collapse;
         color: #9b9a9a;
         tbody {
-            
+            .table-modal-row td{
+                    border-top: 1px solid #7c7b7b4b!important;
+                    padding: 1rem;
+            }
         }
     }
     .table-bottom {
@@ -142,7 +145,7 @@ import { mapState } from "vuex"
         display: flex;
         justify-content: center;
         align-items: center;
-        border-top: 2px solid #9b9a9aa4;
+        border-top: 1px solid #7c7b7b4b;
         p {
             color:red;
             font-weight: bold;

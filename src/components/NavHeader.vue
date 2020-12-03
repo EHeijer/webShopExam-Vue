@@ -54,11 +54,11 @@
             .product-list {
                 position: fixed;
                 background: black;
-                top:81.78px;
+                top:81.3px;
                 left: 0;
                 height: 100vh;
                 width: 100vw;
-                opacity: 0.95;
+                opacity: 0.98;
                 padding: 2rem 1rem 2rem 1rem;
                 li {
                     padding: 1rem 0;
@@ -84,7 +84,7 @@
                     color: #fff;
                     font-size: 40px;
                     position: absolute;
-                    left: 94%;
+                    left: 92%;
                     cursor: pointer;
                 }
                 .icon:hover {
