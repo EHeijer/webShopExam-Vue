@@ -3,12 +3,7 @@
         <div class="header-container">
             <router-link to="/" class="title"><h1>Employee Service</h1></router-link>
             
-            <ul v-if="open" class="product-list">
-                <li><router-link @click.native="closeNav" to="/">Home</router-link></li>
-                <li><router-link @click.native="closeNav" to="/employee-actions/handle-orders">Handle Orders</router-link></li>
-                <li><router-link @click.native="closeNav" to="/employee-actions/order-history">Order History</router-link></li>
-                <li><router-link @click.native="closeNav" to="/employee-actions/products">Products</router-link></li>
-            </ul>
+            <NavList @closeNav="closeNav" :open="open" v-if="open"/>
             <div class="bars">
                 <font-awesome-icon v-if="!open" @click="openNav" icon="bars" class="icon" />
                 <font-awesome-icon v-if="open" @click="closeNav" icon="times" class="icon" />
@@ -18,7 +13,11 @@
 </template>
 
 <script>
+import NavList from './NavList'
    export default {
+       components: {
+           NavList
+       },
      data: () => ({
        open: false
      }),
@@ -38,9 +37,10 @@
 <style lang="scss" scoped>
    header {
        position: fixed;
-        background: rgb(165, 165, 165);
+        background: #007bff;
         padding: 1.4rem;
         width: 100vw;
+        z-index: 2;
         .header-container{
             display: flex;
             .title{
@@ -51,34 +51,7 @@
                 font-weight: 300;
                 }
             }
-            .product-list {
-                position: fixed;
-                background: black;
-                top:81.78px;
-                left: 0;
-                height: 100vh;
-                width: 100vw;
-                opacity: 0.95;
-                padding: 2rem 1rem 2rem 1rem;
-                li {
-                    padding: 1rem 0;
-                    // border-bottom: solid 2px rgba(255, 255, 255, 0.13);
-                    // width: 80%;
-                    // margin: auto;
-                    list-style: none;
-                    a{
-                        color: #fff;
-                        text-decoration: none;
-                        font-size: 30px;
-                        
-                        
-                    }
-                    a:hover {
-                        color: rgba(255, 255, 255, 0.116);
-                    }
-                }
-                
-            }
+            
             .bars {
                 .icon {
                     color: #fff;

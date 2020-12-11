@@ -36,15 +36,10 @@ import { mapState } from "vuex"
      }),
      methods: {
          addProduct() {
-            
-            
-             this.$store.dispatch("addProduct", this.newProduct);
-             this.getProducts.push(this.newProduct);
-            this.$store.dispatch('loadProducts')
+            event.preventDefault();
+            this.$store.dispatch("addProduct", this.newProduct).then(() => this.$store.dispatch('loadProducts'));
             event.target.reset()
-             document.querySelector('.underlying').style.display = 'none';
-             document.querySelector('.new-product-form').style.display = 'none';
-             document.querySelector('body').style.overflowY = "visible";
+            this.hideProductForm();
          },
          hideProductForm() {
              document.querySelector('.underlying').style.display = 'none';
@@ -91,7 +86,7 @@ import { mapState } from "vuex"
     padding: 0rem 1rem;
     header {
         width: 100%;
-        background: #5a5959;
+        background: #00000050;
         text-align: left;
         padding: 1rem;
         border-top-left-radius: 5px;
@@ -141,7 +136,7 @@ import { mapState } from "vuex"
     .click-button {
             margin: 1.5rem auto;
             border:none;
-            background: #9b9a9a;
+            background: #00000050;
             color: #fff;
             font-weight: bold;
             cursor: pointer;

@@ -166,7 +166,7 @@ import { mapState } from "vuex"
             overflow-y: scroll;
             max-height: 70vh;
             header {
-                background: rgba(#000, 0.54);
+                background: #00000050;
                 color: #fff;
                 padding: 1rem;
                 display: flex;

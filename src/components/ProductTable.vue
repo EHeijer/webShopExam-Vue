@@ -185,7 +185,7 @@ import RegisterProduct from '../components/RegisterProduct'
     .click-button {
             margin: 1rem auto;
             border:none;
-            background: #9b9a9a;
+            background: #00000050;
             color: #fff;
             font-weight: bold;
             cursor: pointer;
@@ -210,7 +210,7 @@ import RegisterProduct from '../components/RegisterProduct'
             max-height: 70vh;
             margin: auto;
             header {
-                background: rgba(#000, 0.54);
+                background: #00000050;
                 color: #fff;
                 padding: 1rem;
                 display: flex;
