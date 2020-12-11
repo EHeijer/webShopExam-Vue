@@ -133,8 +133,8 @@ import { mapState } from "vuex"
         .icon {
         position: absolute;
         left: 97.5%;
-        top: 12px;
-        font-size: 20px;
+        top: 6px;
+        font-size: 25px;
         }
     }
     table {

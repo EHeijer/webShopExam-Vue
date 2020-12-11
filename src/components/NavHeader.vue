@@ -57,7 +57,7 @@ import NavList from './NavList'
                     color: #fff;
                     font-size: 40px;
                     position: absolute;
-                    left: 94%;
+                    left: 92%;
                     cursor: pointer;
                 }
                 .icon:hover {
