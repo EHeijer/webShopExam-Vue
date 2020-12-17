@@ -2,7 +2,6 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-import * as VeeValidate from 'vee-validate';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import {
@@ -30,7 +29,7 @@ library.add(faHome, faBars, faSearchPlus, faPlusCircle, faTimes, faTrashAlt, faP
 
 Vue.config.productionTip = false
 
-Vue.use(VeeValidate);
+
 Vue.component('font-awesome-icon', FontAwesomeIcon);
 
 new Vue({
